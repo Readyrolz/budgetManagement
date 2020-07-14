@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BalanceController">
+   <children>
+      <VBox layoutX="600.0" layoutY="94.0" prefHeight="200.0" prefWidth="100.0" />
+      <TableView fx:id="balanceTable" layoutX="10.0" layoutY="125.0" prefHeight="279.0" prefWidth="693.0">
+        <columns>
+          <TableColumn fx:id="balanceId" prefWidth="72.0" text="ID" />
+          <TableColumn fx:id="balanceDate" prefWidth="262.0" text="CREATE_DATE" />
+            <TableColumn fx:id="balanceDebit" prefWidth="110.0" text="DEBIT" />
+            <TableColumn fx:id="balanceCredit" prefWidth="102.0" text="CREDIT" />
+            <TableColumn fx:id="balanceAmount" minWidth="2.0" prefWidth="142.0" text="AMOUNT" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="30.0" prefHeight="35.0" prefWidth="43.0" text="ID">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="261.0" layoutY="32.0" mnemonicParsing="false" onAction="#delBalance" prefHeight="31.0" prefWidth="85.0" text="Delete" />
+      <TextField fx:id="textBalanceId" layoutX="125.0" layoutY="32.0" prefHeight="31.0" prefWidth="114.0" />
+      <Button layoutX="516.0" layoutY="79.0" mnemonicParsing="false" onAction="#updateArticle" prefHeight="31.0" prefWidth="77.0" text="Add" />
+      <Label layoutX="27.0" layoutY="79.0" text="Debit">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textBalanceDebit" layoutX="125.0" layoutY="79.0" prefHeight="31.0" prefWidth="114.0" />
+      <Label layoutX="274.0" layoutY="78.0" text="Credit">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textBalanceCredit" layoutX="368.0" layoutY="79.0" prefHeight="31.0" prefWidth="114.0" />
+   </children>
+</AnchorPane>

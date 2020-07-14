@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OperationController">
+   <children>
+      <TableView fx:id="operationTable" layoutX="6.0" layoutY="200.0" prefHeight="200.0" prefWidth="706.0">
+        <columns>
+          <TableColumn fx:id="operationId" prefWidth="54.0" text="Id" />
+          <TableColumn fx:id="operationArticle" prefWidth="106.0" text="ARTICLE_ID" />
+            <TableColumn fx:id="operationDebit" prefWidth="87.0" text="Debit" />
+            <TableColumn fx:id="operationBalance" prefWidth="100.0" text="BALANCE_ID" visible="false" />
+            <TableColumn fx:id="operationCredit" prefWidth="136.0" text="Credit" />
+            <TableColumn fx:id="operationDate" prefWidth="312.0" text="Create_date" />
+        </columns>
+      </TableView>
+      <GridPane prefHeight="200.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#delOperation" prefHeight="31.0" prefWidth="79.0" text="Delete" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="115.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#insertOperation" prefHeight="31.0" prefWidth="81.0" text="Add" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Label text="Artlcle ID">
+               <GridPane.margin>
+                  <Insets left="22.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="ID" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label prefHeight="21.0" prefWidth="61.0" text="Debit" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label text="Credit" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label text="Create date" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="opId" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="130.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="textDebit" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="130.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="textCredit" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="130.0" right="20.0" />
+               </GridPane.margin></TextField>
+            <ComboBox fx:id="articleId" prefWidth="150.0">
+               <GridPane.margin>
+                  <Insets left="130.0" right="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <DatePicker fx:id="textDate" prefHeight="31.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <Button mnemonicParsing="false" onAction="#updateOperation" prefHeight="31.0" prefWidth="80.0" text="Update" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="210.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <VBox layoutX="606.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" />
+   </children>
+</AnchorPane>

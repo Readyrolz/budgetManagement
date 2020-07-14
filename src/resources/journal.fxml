@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="446.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
+   <children>
+      <LineChart id="chartDebit" fx:id="lineChart" layoutX="-10.0" mouseTransparent="true" prefHeight="327.0" prefWidth="687.0" title="График чистой прибыли" AnchorPane.bottomAnchor="118.0">
+        <xAxis>
+          <CategoryAxis prefHeight="2.0" prefWidth="549.0" tickLabelRotation="-45.0">
+               <tickLabelFont>
+                  <Font size="9.0" />
+               </tickLabelFont></CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#getChart" prefHeight="31.0" prefWidth="91.0" text="Update" />
+   </children>
+</AnchorPane>
